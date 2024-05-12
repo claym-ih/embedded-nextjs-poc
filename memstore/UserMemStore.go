@@ -40,8 +40,12 @@ func (m UserMemStore) Get(id string) (models.User, error) {
 	return models.User{}, NotFoundErr
 }
 
-func (m UserMemStore) List() (map[string]models.User, error) {
-	return m.list, nil
+func (m UserMemStore) List() ([]models.User, error) {
+	users := make([]models.User, 0, len(m.list))
+	for _, note := range m.list {
+		users = append(users, note)
+	}
+	return users, nil
 }
 
 func (m UserMemStore) Update(id string, User models.User) (models.User, error) {

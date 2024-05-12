@@ -40,12 +40,25 @@ export default function RootLayout({
                     routerProvider={routerProvider}
                     dataProvider={dataProvider}
                     notificationProvider={notificationProvider}
+                    resources={[
+                      {
+                        name: "user",
+                        list: "/user",
+                        create: "/user/create",
+                        edit: "/user/edit/:id",
+                        show: "/user/show/:id",
+                        meta: {
+                          canDelete: true,
+                        },
+                      },
+                    ]}
                     options={{
                       syncWithLocation: true,
                       warnWhenUnsavedChanges: true,
                       useNewQueryKeys: true,
-                      projectId: "KhQC11-mgaK2c-h3qLtz",
+                      projectId: "A6qaqa-Ci5zW8-nYSpOU",
                     }}
+
                   >
                     {children}
                     <RefineKbar />

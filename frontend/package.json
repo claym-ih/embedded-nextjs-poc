@@ -10,7 +10,8 @@
     "build": "refine build",
     "start": "refine start",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "refine": "refine"
+    "refine": "refine",
+    "export": "rm -rf .next && refine build"
   },
   "dependencies": {
     "@refinedev/cli": "^2.16.21",
@@ -44,6 +45,6 @@
     "@types/js-cookie": "^3.0.6"
   },
   "refine": {
-    "projectId": "KhQC11-mgaK2c-h3qLtz"
+    "projectId": "A6qaqa-Ci5zW8-nYSpOU"
   }
 }
